@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#071321">
+<title>Pamir Runner — Бег по крышам Памира</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" aria-label="Pamir Runner game"></canvas>
+  <div class="hud">
+    <div class="brand"><span class="logo">PR</span><div><b>PAMIR RUNNER</b><small>БЕГ ПО КРЫШАМ ПАМИРА</small></div></div>
+    <div class="stats"><div><small>ДИСТАНЦИЯ</small><b id="distance">0 м</b></div><div><small>МОНЕТЫ</small><b id="coins">0</b></div><div><small>РЕКОРД</small><b id="best">0 м</b></div></div>
+  </div>
+  <div id="start-screen" class="overlay">
+    <div class="panel">
+      <div class="eyebrow">ЗАПУСКАЕМСЯ?</div>
+      <h1>PAMIR<br><em>RUNNER</em></h1>
+      <p>Мчись по горным дорогам, перепрыгивай барьеры и собирай монеты. Насколько далеко ты добежишь?</p>
+      <div class="features"><span>◆ 3 дорожки</span><span>◆ Монеты</span><span>◆ Рекорды</span></div>
+      <button id="start-btn">НАЧАТЬ БЕГ <span>→</span></button>
+      <div class="hint">УПРАВЛЕНИЕ: ← → или свайп · ↑ / тап — прыжок · ↓ — скольжение</div>
+    </div>
+  </div>
+  <div id="gameover-screen" class="overlay hidden">
+    <div class="panel compact">
+      <div class="eyebrow">ЗАБЕГ ЗАВЕРШЁН</div><h2>ХОРОШИЙ ЗАБЕГ!</h2>
+      <div class="result"><div><small>ДИСТАНЦИЯ</small><b id="final-distance">0 м</b></div><div><small>МОНЕТЫ</small><b id="final-coins">0</b></div></div>
+      <p id="record-message">Попробуй побить свой рекорд.</p>
+      <button id="restart-btn">ЕЩЁ РАЗ <span>↻</span></button>
+      <button id="menu-btn" class="secondary">В МЕНЮ</button>
+    </div>
+  </div>
+  <div id="pause-label" class="pause-label hidden">ПАУЗА</div>
+  <div class="mobile-controls">
+    <button data-action="left" aria-label="Влево">◀</button>
+    <button data-action="jump" class="jump" aria-label="Прыжок">▲<small>ПРЫЖОК</small></button>
+    <button data-action="right" aria-label="Вправо">▶</button>
+    <button data-action="slide" aria-label="Скольжение">▼</button>
+  </div>
+  <button id="pause-btn" class="pause-btn" aria-label="Пауза">Ⅱ</button>
+  <div class="toast" id="toast"></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>

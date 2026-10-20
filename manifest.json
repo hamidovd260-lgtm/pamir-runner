@@ -1,0 +1,11 @@
+{
+  "name": "Pamir Runner",
+  "short_name": "Pamir Runner",
+  "description": "Бесконечный раннер по горным дорогам Памира",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071321",
+  "theme_color": "#071321",
+  "orientation": "portrait",
+  "icons": []
+}
